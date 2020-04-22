@@ -1,0 +1,9 @@
+form(action="/todos")
+  input(name="q" placeholder="search for name...." value=q)
+  button(type="submit" style="cursor: pointer;") search
+form(action="/todos/create" method="POST")
+  input(name="todo" placeholder="Enter Todo")
+  button(type="submit" style="cursor: pointer;") Create
+ul
+  each todo in todos
+    li= todo.name
